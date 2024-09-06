@@ -1,7 +1,7 @@
 <?php
-require_once 'author.php';
-require_once 'book.php';
-require_once 'publisher.php';
+require_once 'Author.php';
+require_once 'Book.php';
+require_once 'Publisher.php';
 
 $author1 = new Author('Tereliye', 'Penulis asal Indonesia, dikenal karena kemampuannya dalam mengeksplorasi tema-tema kehidupan, cinta, perjalanan manusia, serta jiwa kritik yang kuat terhadap pemerintahan Indonesia.');
 $book1 = new Book(9786238882205, 'Teruslah Bodoh Jangan Pintar', 'Menyajikan pandangan mendalam tentang pentingnya kesederhanaan dan kejujuran dalam menjalani hidup, serta bagaimana kita sering kali kehilangan makna sebenarnya di balik pencapaian dan ambisi yang tidak perlu.', 'Filosofi, Fantasy', 'Indonesia', 371, 'Tereliye', 'Sabak Grip');
