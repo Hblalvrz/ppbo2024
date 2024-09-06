@@ -1,4 +1,5 @@
 <?php
+
 require_once 'kelima.php';
 require_once 'kelima.php';
 require_once 'ketujuh.php';
