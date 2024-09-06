@@ -1,5 +1,6 @@
 <?php
 
+
 class Publisher
 {
     public $name;
