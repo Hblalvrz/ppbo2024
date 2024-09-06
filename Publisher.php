@@ -2,8 +2,8 @@
 
 class Publisher
 {
-    public $name;
-    public $address;
+    private $name;
+    private $address;
     private $phone;
 
     public function __construct($name, $address, $phone) 
@@ -21,15 +21,5 @@ class Publisher
     public function getPhone() : string 
     {
         return $this->phone;
-    }
-
-    public function getName() : string 
-    {
-    return $this->name;
-    }
-
-public function getAddress() : string 
-    {
-    return $this->address;
     }
 }

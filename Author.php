@@ -17,12 +17,12 @@ class Author
         {
             return ['name' => $this->name];
         } 
-        
+
         elseif ($type === 'description') 
         {
             return ['description' => $this->description];
         } 
-        
+
         else 
         {
             return [];
