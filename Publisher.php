@@ -2,8 +2,8 @@
 
 class Publisher
 {
-    private $name;
-    private $address;
+    public $name;
+    public $address;
     private $phone;
 
     public function __construct($name, $address, $phone) 
