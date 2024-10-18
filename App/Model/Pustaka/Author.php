@@ -1,33 +1,39 @@
 <?php
 
+
 namespace App\Model\Pustaka;
 
-class Author
-{
-    public $name;
-    public $description;
 
-    public function __construct($name, $description) 
+use App\Model\Model;
+
+
+class Author extends Model
+{
+    public int $id;
+    public string $name;
+    public string $description;
+
+
+    public function save()
     {
-        $this->name = $name;
-        $this->description = $description;
+        try {
+            $stmt = $this->db->prepare("INSERT INTO author (id, name , description) VALUES (:id, :name, :description)");
+            $stmt->bindParam(':id', $this->id);
+            $stmt->bindParam(':name', $this->name);
+            $stmt->bindParam(':description', $this->description);
+            $result = $stmt->execute();
+        } catch (\PDOException $e) {
+            http_response_code(500);
+            $result = ["message" => $e->getMessage()];
+        }
+        return $result;
     }
 
-    public function show($type) : array 
+
+
+
+    public function show(): array
     {
-        if ($type === 'name') 
-        {
-            return ['name' => $this->name];
-        } 
-
-        elseif ($type === 'description') 
-        {
-            return ['description' => $this->description];
-        } 
-
-        else 
-        {
-            return [];
-        }
+        return [];
     }
 }
