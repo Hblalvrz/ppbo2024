@@ -7,7 +7,7 @@ require_once 'vendor/autoload.php';
 
 
 $author = new Author();
-$author->id = 6;
-$author->name = 'Dian Prawira';
-$author->description = 'Email: wiraaja@gmail.com';
+$author->id = 11;
+$author->name = 'Habiel Alvarezi';
+$author->description = 'Penulis pemula yang menyukai hal terkait teknologi.';
 View::json($author->save());
